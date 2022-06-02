@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="styles.css">
+<head>
+    <title> Ejercicio </title>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="../libs/jquery.js"></script>
+    <script type="module" src="MyScene.js"></script>    
+    
+    <style>
+        body{
+            margin: 0;
+            overflow: hidden; 
+        }
+    </style>
+</head>
+<body style="width:100%">
+    <div id="Stats-output" style="float:right">
+    </div>
+    <div class="otraSeccion">
+        Saldo actual: <span id="Saldo"></span> $<br>
+        <div class="historial">
+            <span id="h1"></span><br>
+            <span id="h2"></span><br>
+            <span id="h3"></span><br>
+            <span id="h4"></span><br>
+            <span id="h5"></span><br>
+        </div>
+    </div>
+    <div id="BotMenu" >
+        <div class="objectLine">
+            <div id="eliminar" class="border1 Area selectBorder">
+                | Q |
+                <img src="../imgs/vacio.png" class="imagen"/>
+                Quitar
+            </div>
+        </div>
+        <div class="objectLine">
+            <div id="zanahoria" class="border1 Area">
+                | 1 |
+                <img src="../imgs/zanahoria.png" class="imagen"/>
+                8 $
+            </div>
+        </div>
+        <div class="objectLine">
+            <div id="trigo" class="border1 Area">
+                | 2 |
+                <img src="../imgs/trigo.png" class="imagen"/>
+                5 $</div>
+            </div>
+        <div class="objectLine">
+            <div id="vaca" class="border1 Area">
+                | 3 |
+                <img src="../imgs/vaca.png" class="imagen"/>
+                25 $</div>
+            </div>
+        <div class="objectLine">
+            <div id="gallina" class="border1 Area">
+                | 4 |
+                <img src="../imgs/gallina.png" class="imagen"/>
+                20 $
+            </div>
+        </div>
+        <div class="texto objectLine Espacio">
+        </div>
+        <div class="objectLine">
+            <div id="nada" class="objectLine border1 Area selectBorder">
+                Toggle
+                <img src="../imgs/mano.png" class="imagen"/>
+                
+            </div>
+        </div>
+        <div class="objectLine">
+            <div id="regadera" class="objectLine border1 Area Oscuro">
+                | 5 |
+                <img src="../imgs/regadera.png" class="imagen"/>
+                <span id="regaderaPrecio">15$</span>
+            </div>
+        </div>
+        <div class="objectLine">
+            <div id="pala" class="objectLine border1 Area Oscuro">
+                | 6 |
+                <img src="../imgs/pala.png" class="imagen"/>
+                <span id="palaPrecio">15$</span>
+            </div>
+        </div>
+        <button onclick="toggle()" id="boton" style="width: 50px;margin-left:50px">
+            <img src="../imgs/info.png" class="imagen"/>
+        </button>
+    </div>
+    <div id="info" class="info animacion ">
+        <h1>Cómo jugar</h1>
+        <p>Controles
+            <br>Movimiento con las teclas W/A/S/D
+            <br>[Q]: quitar contenido de una parcela
+            <br>[1]: poner zanahorias en una parcela
+            <br>[2]: poner un trigal en una parcela
+            <br>[3]: poner una vaca en una parcela
+            <br>[4]: poner un gallinero en una parcela
+            <br>[5]: comprar/equipar/desequipar regadera
+            <br>[6]: comprar/equipar/desequipar pala
+        </p>
+        <p>
+            Para interactuar con una parcela, acércate a ella y haz click encima.
+            Podrás recoger los beneficios cuando se iluminen
+        </p>
+    </div>
+    <div id="WebGL-output">
+    </div>
+</body>
+<script>
+
+function toggle() {
+    var x = document.getElementById("info");
+    if (x.style.display === "") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "";
+    }
+}
+
+
+</script>
+</html>
